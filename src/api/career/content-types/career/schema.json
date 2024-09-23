@@ -4,7 +4,8 @@
   "info": {
     "singularName": "career",
     "pluralName": "careers",
-    "displayName": "Career"
+    "displayName": "Career",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,34 @@
     },
     "location": {
       "type": "string"
+    },
+    "SkillsMustToHave": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "SkillsNiceToHave": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "SalaryType": {
+      "displayName": "SalaryType",
+      "type": "component",
+      "repeatable": true,
+      "component": "career-components.salary-type"
+    },
+    "Recruiter": {
+      "displayName": "Recruiter",
+      "type": "component",
+      "repeatable": false,
+      "component": "career-components.recruiter"
+    },
+    "JobOfferSection": {
+      "displayName": "JobOfferSection",
+      "type": "component",
+      "repeatable": true,
+      "component": "career-components.job-offer-section"
     }
   }
 }

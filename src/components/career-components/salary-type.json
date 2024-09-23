@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_career_components_salary_types",
+  "info": {
+    "displayName": "SalaryType"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "string",
+      "required": true
+    },
+    "SalaryFrom": {
+      "type": "integer"
+    },
+    "SalaryTo": {
+      "type": "integer"
+    },
+    "isDisclosed": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "Currency": {
+      "type": "string",
+      "default": "PLN",
+      "required": true
+    }
+  }
+}

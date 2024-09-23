@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_career_components_check_mark_elements",
+  "info": {
+    "displayName": "CheckMarkElement"
+  },
+  "options": {},
+  "attributes": {
+    "TextItem": {
+      "type": "text"
+    }
+  }
+}

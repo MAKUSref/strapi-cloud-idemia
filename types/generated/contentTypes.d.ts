@@ -794,6 +794,7 @@ export interface ApiCareerCareer extends Schema.CollectionType {
     singularName: 'career';
     pluralName: 'careers';
     displayName: 'Career';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -801,6 +802,14 @@ export interface ApiCareerCareer extends Schema.CollectionType {
   attributes: {
     JobTitle: Attribute.String;
     location: Attribute.String;
+    SkillsMustToHave: Attribute.Component<'shared.tag', true>;
+    SkillsNiceToHave: Attribute.Component<'shared.tag', true>;
+    SalaryType: Attribute.Component<'career-components.salary-type', true>;
+    Recruiter: Attribute.Component<'career-components.recruiter'>;
+    JobOfferSection: Attribute.Component<
+      'career-components.job-offer-section',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

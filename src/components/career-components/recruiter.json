@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_career_components_recruiters",
+  "info": {
+    "displayName": "Recruiter"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "LinkedIn": {
+      "type": "string"
+    }
+  }
+}

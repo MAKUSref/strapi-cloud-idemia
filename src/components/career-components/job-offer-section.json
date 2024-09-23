@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_career_components_job_offer_sections",
+  "info": {
+    "displayName": "JobOfferSection"
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "text",
+      "required": false
+    },
+    "CheckMarkList": {
+      "displayName": "CheckMarkElement",
+      "type": "component",
+      "repeatable": true,
+      "component": "career-components.check-mark-element"
+    }
+  }
+}

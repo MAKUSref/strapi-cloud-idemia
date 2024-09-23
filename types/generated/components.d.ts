@@ -1,5 +1,61 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CareerComponentsCheckMarkElement extends Schema.Component {
+  collectionName: 'components_career_components_check_mark_elements';
+  info: {
+    displayName: 'CheckMarkElement';
+  };
+  attributes: {
+    TextItem: Attribute.Text;
+  };
+}
+
+export interface CareerComponentsJobOfferSection extends Schema.Component {
+  collectionName: 'components_career_components_job_offer_sections';
+  info: {
+    displayName: 'JobOfferSection';
+  };
+  attributes: {
+    Header: Attribute.String & Attribute.Required;
+    Content: Attribute.Text;
+    CheckMarkList: Attribute.Component<
+      'career-components.check-mark-element',
+      true
+    >;
+  };
+}
+
+export interface CareerComponentsRecruiter extends Schema.Component {
+  collectionName: 'components_career_components_recruiters';
+  info: {
+    displayName: 'Recruiter';
+  };
+  attributes: {
+    Name: Attribute.String;
+    Description: Attribute.String;
+    Email: Attribute.Email;
+    LinkedIn: Attribute.String;
+  };
+}
+
+export interface CareerComponentsSalaryType extends Schema.Component {
+  collectionName: 'components_career_components_salary_types';
+  info: {
+    displayName: 'SalaryType';
+  };
+  attributes: {
+    Type: Attribute.String & Attribute.Required;
+    SalaryFrom: Attribute.Integer;
+    SalaryTo: Attribute.Integer;
+    isDisclosed: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+    Currency: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'PLN'>;
+  };
+}
+
 export interface EventsComponentsArticleSection extends Schema.Component {
   collectionName: 'components_events_components_article_sections';
   info: {
@@ -99,6 +155,10 @@ export interface SharedTag extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'career-components.check-mark-element': CareerComponentsCheckMarkElement;
+      'career-components.job-offer-section': CareerComponentsJobOfferSection;
+      'career-components.recruiter': CareerComponentsRecruiter;
+      'career-components.salary-type': CareerComponentsSalaryType;
       'events-components.article-section': EventsComponentsArticleSection;
       'events-components.author': EventsComponentsAuthor;
       'shared.media': SharedMedia;

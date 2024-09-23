@@ -1,5 +1,29 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface EventsComponentsArticleSection extends Schema.Component {
+  collectionName: 'components_events_components_article_sections';
+  info: {
+    displayName: 'ArticleSection';
+  };
+  attributes: {
+    Header: Attribute.String;
+    Content: Attribute.Text;
+    Image: Attribute.Media;
+  };
+}
+
+export interface EventsComponentsAuthor extends Schema.Component {
+  collectionName: 'components_events_components_authors';
+  info: {
+    displayName: 'Author';
+  };
+  attributes: {
+    AuthorName: Attribute.String & Attribute.Required;
+    JobPosition: Attribute.String & Attribute.Required;
+    Avatar: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -62,14 +86,27 @@ export interface SharedSlider extends Schema.Component {
   };
 }
 
+export interface SharedTag extends Schema.Component {
+  collectionName: 'components_shared_tags';
+  info: {
+    displayName: 'Tag';
+  };
+  attributes: {
+    Name: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'events-components.article-section': EventsComponentsArticleSection;
+      'events-components.author': EventsComponentsAuthor;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.tag': SharedTag;
     }
   }
 }

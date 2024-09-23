@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "knowledges",
+  "info": {
+    "singularName": "knowledge",
+    "pluralName": "knowledges",
+    "displayName": "Knowledge",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Tag": {
+      "displayName": "Tag",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "CoverPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Author": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events-components.author"
+    },
+    "ArticleSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "events-components.article-section"
+    }
+  }
+}

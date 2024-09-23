@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_events_components_authors",
+  "info": {
+    "displayName": "Author"
+  },
+  "options": {},
+  "attributes": {
+    "AuthorName": {
+      "type": "string",
+      "required": true
+    },
+    "JobPosition": {
+      "type": "string",
+      "required": true
+    },
+    "Avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,24 +1,26 @@
 {
   "collectionName": "components_events_components_article_sections",
   "info": {
-    "displayName": "ArticleSection"
+    "displayName": "ArticleSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Header": {
+    "header": {
       "type": "string"
     },
-    "Content": {
+    "content": {
       "type": "text"
     },
-    "Image": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

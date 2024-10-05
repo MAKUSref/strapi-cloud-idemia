@@ -12,17 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "Tag": {
+    "tag": {
       "displayName": "Tag",
       "type": "component",
       "repeatable": true,
-      "component": "shared.tag"
+      "component": "shared.tag",
+      "max": 2
     },
-    "CoverPhoto": {
+    "coverPhoto": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -30,12 +31,12 @@
         "images"
       ]
     },
-    "Author": {
+    "author": {
       "type": "component",
       "repeatable": false,
       "component": "events-components.author"
     },
-    "ArticleSection": {
+    "articleSection": {
       "type": "component",
       "repeatable": true,
       "component": "events-components.article-section"

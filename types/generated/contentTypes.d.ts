@@ -840,11 +840,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String & Attribute.Required;
-    PublishDate: Attribute.Date & Attribute.Required;
-    CoverPhoto: Attribute.Media & Attribute.Required;
-    Author: Attribute.Component<'events-components.author'>;
-    ArticleSection: Attribute.Component<
+    title: Attribute.String & Attribute.Required;
+    publishDate: Attribute.Date & Attribute.Required;
+    coverPhoto: Attribute.Media & Attribute.Required;
+    author: Attribute.Component<'events-components.author'>;
+    articleSection: Attribute.Component<
       'events-components.article-section',
       true
     >;
@@ -878,11 +878,17 @@ export interface ApiKnowledgeKnowledge extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String & Attribute.Required;
-    Tag: Attribute.Component<'shared.tag', true>;
-    CoverPhoto: Attribute.Media & Attribute.Required;
-    Author: Attribute.Component<'events-components.author'>;
-    ArticleSection: Attribute.Component<
+    title: Attribute.String & Attribute.Required;
+    tag: Attribute.Component<'shared.tag', true> &
+      Attribute.SetMinMax<
+        {
+          max: 2;
+        },
+        number
+      >;
+    coverPhoto: Attribute.Media & Attribute.Required;
+    author: Attribute.Component<'events-components.author'>;
+    articleSection: Attribute.Component<
       'events-components.article-section',
       true
     >;

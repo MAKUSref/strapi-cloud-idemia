@@ -12,31 +12,28 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "PublishDate": {
+    "publishDate": {
       "type": "date",
       "required": true
     },
-    "CoverPhoto": {
+    "coverPhoto": {
       "type": "media",
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
-    "Author": {
+    "author": {
       "type": "component",
       "repeatable": false,
       "component": "events-components.author"
     },
-    "ArticleSection": {
+    "articleSection": {
       "type": "component",
       "repeatable": true,
       "component": "events-components.article-section"

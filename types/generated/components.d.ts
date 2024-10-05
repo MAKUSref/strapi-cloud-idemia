@@ -60,11 +60,12 @@ export interface EventsComponentsArticleSection extends Schema.Component {
   collectionName: 'components_events_components_article_sections';
   info: {
     displayName: 'ArticleSection';
+    description: '';
   };
   attributes: {
-    Header: Attribute.String;
-    Content: Attribute.Text;
-    Image: Attribute.Media;
+    header: Attribute.String;
+    content: Attribute.Text;
+    image: Attribute.Media;
   };
 }
 
@@ -72,11 +73,12 @@ export interface EventsComponentsAuthor extends Schema.Component {
   collectionName: 'components_events_components_authors';
   info: {
     displayName: 'Author';
+    description: '';
   };
   attributes: {
-    AuthorName: Attribute.String & Attribute.Required;
-    JobPosition: Attribute.String & Attribute.Required;
-    Avatar: Attribute.Media & Attribute.Required;
+    authorName: Attribute.String & Attribute.Required;
+    jobPosition: Attribute.String & Attribute.Required;
+    avatar: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -146,9 +148,10 @@ export interface SharedTag extends Schema.Component {
   collectionName: 'components_shared_tags';
   info: {
     displayName: 'Tag';
+    description: '';
   };
   attributes: {
-    Name: Attribute.String;
+    name: Attribute.String;
   };
 }
 

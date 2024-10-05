@@ -1,25 +1,26 @@
 {
   "collectionName": "components_events_components_authors",
   "info": {
-    "displayName": "Author"
+    "displayName": "Author",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "AuthorName": {
+    "authorName": {
       "type": "string",
       "required": true
     },
-    "JobPosition": {
+    "jobPosition": {
       "type": "string",
       "required": true
     },
-    "Avatar": {
-      "allowedTypes": [
-        "images"
-      ],
+    "avatar": {
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

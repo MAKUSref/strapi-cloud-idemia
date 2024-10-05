@@ -1,11 +1,12 @@
 {
   "collectionName": "components_shared_tags",
   "info": {
-    "displayName": "Tag"
+    "displayName": "Tag",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     }
   }

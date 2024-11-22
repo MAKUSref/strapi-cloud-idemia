@@ -1,18 +1,19 @@
 {
   "collectionName": "components_career_components_salary_types",
   "info": {
-    "displayName": "SalaryType"
+    "displayName": "SalaryType",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Type": {
+    "type": {
       "type": "string",
       "required": true
     },
-    "SalaryFrom": {
+    "salaryFrom": {
       "type": "integer"
     },
-    "SalaryTo": {
+    "salaryTo": {
       "type": "integer"
     },
     "isDisclosed": {
@@ -20,7 +21,7 @@
       "default": true,
       "required": true
     },
-    "Currency": {
+    "currency": {
       "type": "string",
       "default": "PLN",
       "required": true

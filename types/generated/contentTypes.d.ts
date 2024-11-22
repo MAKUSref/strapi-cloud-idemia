@@ -800,13 +800,13 @@ export interface ApiCareerCareer extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    JobTitle: Attribute.String;
+    jobTitle: Attribute.String;
     location: Attribute.String;
-    SkillsMustToHave: Attribute.Component<'shared.tag', true>;
-    SkillsNiceToHave: Attribute.Component<'shared.tag', true>;
-    SalaryType: Attribute.Component<'career-components.salary-type', true>;
-    Recruiter: Attribute.Component<'career-components.recruiter'>;
-    JobOfferSection: Attribute.Component<
+    skillsMustToHave: Attribute.Component<'shared.tag', true>;
+    skillsNiceToHave: Attribute.Component<'shared.tag', true>;
+    salaryType: Attribute.Component<'career-components.salary-type', true>;
+    recruiter: Attribute.Component<'career-components.recruiter'>;
+    jobOfferSection: Attribute.Component<
       'career-components.job-offer-section',
       true
     >;

@@ -1,21 +1,32 @@
 {
   "collectionName": "components_career_components_recruiters",
   "info": {
-    "displayName": "Recruiter"
+    "displayName": "Recruiter",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
       "type": "string"
     },
-    "Description": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "linkedIn": {
       "type": "string"
     },
-    "Email": {
-      "type": "email"
-    },
-    "LinkedIn": {
-      "type": "string"
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

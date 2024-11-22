@@ -12,35 +12,35 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "JobTitle": {
+    "jobTitle": {
       "type": "string"
     },
     "location": {
       "type": "string"
     },
-    "SkillsMustToHave": {
+    "skillsMustToHave": {
       "type": "component",
       "repeatable": true,
       "component": "shared.tag"
     },
-    "SkillsNiceToHave": {
+    "skillsNiceToHave": {
       "type": "component",
       "repeatable": true,
       "component": "shared.tag"
     },
-    "SalaryType": {
+    "salaryType": {
       "displayName": "SalaryType",
       "type": "component",
       "repeatable": true,
       "component": "career-components.salary-type"
     },
-    "Recruiter": {
+    "recruiter": {
       "displayName": "Recruiter",
       "type": "component",
       "repeatable": false,
       "component": "career-components.recruiter"
     },
-    "JobOfferSection": {
+    "jobOfferSection": {
       "displayName": "JobOfferSection",
       "type": "component",
       "repeatable": true,

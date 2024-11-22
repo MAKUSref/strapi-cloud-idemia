@@ -4,9 +4,10 @@ export interface CareerComponentsCheckMarkElement extends Schema.Component {
   collectionName: 'components_career_components_check_mark_elements';
   info: {
     displayName: 'CheckMarkElement';
+    description: '';
   };
   attributes: {
-    TextItem: Attribute.Text;
+    textItem: Attribute.Text;
   };
 }
 
@@ -14,11 +15,12 @@ export interface CareerComponentsJobOfferSection extends Schema.Component {
   collectionName: 'components_career_components_job_offer_sections';
   info: {
     displayName: 'JobOfferSection';
+    description: '';
   };
   attributes: {
-    Header: Attribute.String & Attribute.Required;
-    Content: Attribute.Text;
-    CheckMarkList: Attribute.Component<
+    header: Attribute.String & Attribute.Required;
+    content: Attribute.Text;
+    checkMarkList: Attribute.Component<
       'career-components.check-mark-element',
       true
     >;
@@ -29,12 +31,14 @@ export interface CareerComponentsRecruiter extends Schema.Component {
   collectionName: 'components_career_components_recruiters';
   info: {
     displayName: 'Recruiter';
+    description: '';
   };
   attributes: {
-    Name: Attribute.String;
-    Description: Attribute.String;
-    Email: Attribute.Email;
-    LinkedIn: Attribute.String;
+    name: Attribute.String & Attribute.Required;
+    description: Attribute.String;
+    email: Attribute.Email & Attribute.Required;
+    linkedIn: Attribute.String;
+    avatar: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -42,15 +46,16 @@ export interface CareerComponentsSalaryType extends Schema.Component {
   collectionName: 'components_career_components_salary_types';
   info: {
     displayName: 'SalaryType';
+    description: '';
   };
   attributes: {
-    Type: Attribute.String & Attribute.Required;
-    SalaryFrom: Attribute.Integer;
-    SalaryTo: Attribute.Integer;
+    type: Attribute.String & Attribute.Required;
+    salaryFrom: Attribute.Integer;
+    salaryTo: Attribute.Integer;
     isDisclosed: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<true>;
-    Currency: Attribute.String &
+    currency: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'PLN'>;
   };
